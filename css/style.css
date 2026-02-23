@@ -1,0 +1,40 @@
+/* 
+   Type Selectors*/
+
+body {
+  background-color: #f4f4f4;     /* light gray background */
+  color: #222222;                /* dark readable text */
+  font-size: 1rem;               /* relative unit */
+}
+
+h1 {
+  color: #990000;                /* deep red for main heading */
+}
+
+h2 {
+  color: #003366;                /* dark blue section headings */
+}
+
+/* 
+   Class Selector
+    */
+
+.nav-links a {
+  color: #0066cc;                /* blue navigation links */
+}
+
+/* 
+   ID Selector
+   */
+
+#intro {
+  color: #660000;                /* slightly darker red on homepage title */
+}
+
+/* 
+   Descendant Selector
+    */
+
+article p {
+  font-size: 1.1em;              /* relative to parent font size */
+}
