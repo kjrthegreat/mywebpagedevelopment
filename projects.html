@@ -50,6 +50,20 @@
             Visit MDN Web Docs
           </a>
         </p>
+
+        <!-- (D) Nested box-sizing demo (required) -->
+        <div class="nested-demo">
+          <h4>Box Sizing Demo</h4>
+          <p>This shows what happens when a child has <code>width: 100%</code> plus padding.</p>
+
+          <div class="child-default">
+            <p><strong>Default (content-box):</strong> padding can make this overflow wider than the parent.</p>
+          </div>
+
+          <div class="child-borderbox">
+            <p><strong>border-box:</strong> padding stays inside the 100% width, so it fits.</p>
+          </div>
+        </div>
       </section>
     </article>
   </main>

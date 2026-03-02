@@ -1,40 +1,151 @@
-/* 
-   Type Selectors*/
+/* =========================
+   Base / Type Selectors
+   ========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* makes width/padding/border predictable */
+}
 
 body {
   background-color: #f4f4f4;     /* light gray background */
   color: #222222;                /* dark readable text */
   font-size: 1rem;               /* relative unit */
+  margin: 0;                     /* deliberate reset */
+  line-height: 1.5;
 }
 
 h1 {
   color: #990000;                /* deep red for main heading */
+  margin: 0 0 0.75rem 0;
 }
 
 h2 {
   color: #003366;                /* dark blue section headings */
+  margin: 0 0 1rem 0;
 }
 
-/* 
-   Class Selector
-    */
+/* =========================
+   Nav (Class selector)
+   ========================= */
+
+.nav-links {
+  list-style: none;
+  padding: 0;                    /* box-model choice */
+  margin: 1rem 0 0 0;            /* box-model choice */
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-right: 1rem;            /* spacing between link boxes */
+}
 
 .nav-links a {
   color: #0066cc;                /* blue navigation links */
+  text-decoration: none;
+  padding: 0.25rem 0;            /* padding increases clickable box */
+  border-bottom: 2px solid transparent;
 }
 
-/* 
+.nav-links a:hover,
+.nav-links a:focus {
+  border-bottom-color: #0066cc;
+}
+
+/* =========================
    ID Selector
-   */
+   ========================= */
 
 #intro {
   color: #660000;                /* slightly darker red on homepage title */
 }
 
-/* 
-   Descendant Selector
-    */
+/* =========================
+   Box Model Layout (REQUIRED)
+   ========================= */
 
+/* Header is a box too */
+header {
+  padding: 1.5rem;               /* uses rem */
+  border-bottom: 2px solid #222222;
+}
+
+/* (C) Center main with width + margin:auto */
+main {
+  width: min(900px, 92%);
+  margin: 2rem auto;             /* centers horizontally */
+  padding: 1.5rem;               /* uses rem */
+  border: 2px solid #222222;
+  background-color: #ffffff;
+}
+
+/* (B) Style sections as intentional boxes */
+section {
+  margin: 1.25rem 0;             /* outside spacing between sections */
+  padding: 1rem;                 /* inside spacing for content */
+  border: 2px dashed #555555;
+}
+
+/* (B) Style paragraphs as boxes */
+p {
+  margin: 0 0 1rem 0;
+  padding: 0.5rem;
+  border-left: 4px solid #999999;
+}
+
+/* Your existing descendant selector idea (kept) */
 article p {
   font-size: 1.1em;              /* relative to parent font size */
+}
+
+/* Picture/img box (about page) */
+picture img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  padding: 0.25rem;
+  border: 2px solid #222222;
+}
+
+/* Quote box (index page) */
+blockquote {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 2px solid #222222;
+  background-color: #ffffff;
+}
+
+/* Footer box */
+footer {
+  padding: 1rem 1.5rem;
+  border-top: 2px solid #222222;
+}
+
+/* =========================
+   (D) Nested box-sizing Demo
+   ========================= */
+
+.nested-demo {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border: 2px solid #222222;
+  background-color: #ffffff;
+}
+
+.nested-demo .child-default {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #222222;
+  margin-bottom: 1rem;
+  /* IMPORTANT: no box-sizing here, so padding can cause overflow */
+  box-sizing: content-box;
+}
+
+.nested-demo .child-borderbox {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #222222;
+  box-sizing: border-box; /* fix: padding/border stays inside the width */
 }
