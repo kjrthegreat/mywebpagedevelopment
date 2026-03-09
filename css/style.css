@@ -8,22 +8,49 @@
   box-sizing: border-box; /* makes width/padding/border predictable */
 }
 
+html {
+  font-size: 100%;
+}
+
 body {
   background-color: #f4f4f4;     /* light gray background */
   color: #222222;                /* dark readable text */
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 1rem;               /* relative unit */
   margin: 0;                     /* deliberate reset */
-  line-height: 1.5;
+  line-height: 1.6;
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+.nav-links a {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
   color: #990000;                /* deep red for main heading */
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.2;
   margin: 0 0 0.75rem 0;
 }
 
 h2 {
   color: #003366;                /* dark blue section headings */
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.3;
   margin: 0 0 1rem 0;
+}
+
+h3 {
+  color: #222222;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 0.75rem 0;
 }
 
 /* =========================
@@ -44,6 +71,10 @@ h2 {
 .nav-links a {
   color: #0066cc;                /* blue navigation links */
   text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   padding: 0.25rem 0;            /* padding increases clickable box */
   border-bottom: 2px solid transparent;
 }
@@ -51,6 +82,7 @@ h2 {
 .nav-links a:hover,
 .nav-links a:focus {
   border-bottom-color: #0066cc;
+  text-decoration: underline;
 }
 
 /* =========================
@@ -59,6 +91,7 @@ h2 {
 
 #intro {
   color: #660000;                /* slightly darker red on homepage title */
+  font-weight: 600;
 }
 
 /* =========================
@@ -92,11 +125,50 @@ p {
   margin: 0 0 1rem 0;
   padding: 0.5rem;
   border-left: 4px solid #999999;
+  max-width: 70ch;
 }
 
 /* Your existing descendant selector idea (kept) */
 article p {
-  font-size: 1.1em;              /* relative to parent font size */
+  font-size: 1.05em;             /* relative to parent font size */
+}
+
+/* Lists */
+ul,
+ol {
+  margin: 0 0 1rem 0;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
+/* General links */
+a {
+  color: #0066cc;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+/* Semantic text elements */
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+i {
+  font-style: italic;
+}
+
+cite {
+  font-style: italic;
 }
 
 /* Picture/img box (about page) */
@@ -115,12 +187,26 @@ blockquote {
   padding: 1rem;
   border: 2px solid #222222;
   background-color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Code styling if applicable */
+code,
+pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.95rem;
+}
+
+pre {
+  overflow-x: auto;
+  line-height: 1.5;
 }
 
 /* Footer box */
 footer {
   padding: 1rem 1.5rem;
   border-top: 2px solid #222222;
+  font-size: 0.9rem;
 }
 
 /* =========================
