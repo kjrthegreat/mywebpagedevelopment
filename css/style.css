@@ -235,3 +235,20 @@ footer {
   border: 2px solid #222222;
   box-sizing: border-box; /* fix: padding/border stays inside the width */
 }
+/* =========================
+   Image Styling (CSS3 Demo)
+   ========================= */
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 1rem 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Optional hover effect */
+img:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+}
