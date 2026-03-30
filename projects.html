@@ -25,47 +25,64 @@
     <article>
       <h2>Projects and Interests</h2>
 
-      <section>
-        <h3>What I’m Working On</h3>
-        <p>This page lists a few areas I’m interested in. The point is to use semantic structure (headings, paragraphs, and lists) instead of relying on visuals.</p>
-        <p>Most of my projects connect back to practical IT skills: understanding networks, building clean web pages, and getting better at troubleshooting.</p>
-        <p>Over time, I want this page to turn into a real portfolio with links, screenshots, and short write-ups that explain what I built and what I learned.</p>
-      </section>
+      <!-- FLEXBOX LAYOUT -->
+      <div class="flex-layout">
 
-      <section>
-        <h3>Current Focus Areas</h3>
-        <p>These are the main areas I’m focusing on right now. I’m trying to build a strong foundation before I worry about advanced features or flashy design.</p>
-        <ul>
-          <li><strong>Networking basics:</strong> learning how devices communicate and how to diagnose issues.</li>
-          <li><strong>Web fundamentals:</strong> building clean HTML structure that actually means something.</li>
-          <li><strong>Troubleshooting:</strong> testing, measuring, and making changes one at a time.</li>
-        </ul>
-      </section>
+        <!-- MAIN COLUMN -->
+        <div class="main-column">
 
-      <section id="resources">
-        <h3>Learning Resources</h3>
-        <p>When I get stuck, I usually go straight to documentation before I go to random forum answers. It helps me understand what the technology is supposed to do.</p>
-        <p>
-          <a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer" title="MDN Web Docs">
-            Visit MDN Web Docs
-          </a>
-        </p>
+          <section>
+            <h3>What I’m Working On</h3>
+            <p>This page lists a few areas I’m interested in. The point is to use semantic structure (headings, paragraphs, and lists) instead of relying on visuals.</p>
+            <p>Most of my projects connect back to practical IT skills: understanding networks, building clean web pages, and getting better at troubleshooting.</p>
+            <p>Over time, I want this page to turn into a real portfolio with links, screenshots, and short write-ups that explain what I built and what I learned.</p>
+          </section>
 
-        <!-- Nested box-sizing demo -->
-        <div class="nested-demo">
-          <h4>Box Sizing Demo</h4>
-          <p>This shows what happens when a child has <code>width: 100%</code> plus padding.</p>
+          <section>
+            <h3>Current Focus Areas</h3>
+            <p>These are the main areas I’m focusing on right now. I’m trying to build a strong foundation before I worry about advanced features or flashy design.</p>
+            <ul>
+              <li><strong>Networking basics:</strong> learning how devices communicate and how to diagnose issues.</li>
+              <li><strong>Web fundamentals:</strong> building clean HTML structure that actually means something.</li>
+              <li><strong>Troubleshooting:</strong> testing, measuring, and making changes one at a time.</li>
+            </ul>
+          </section>
 
-          <div class="child-default">
-            <p><strong>Default (content-box):</strong> padding can make this overflow wider than the parent.</p>
-          </div>
-
-          <div class="child-borderbox">
-            <p><strong>border-box:</strong> padding stays inside the 100% width, so it fits.</p>
-          </div>
         </div>
 
-      </section>
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+          <section id="resources">
+            <h3>Learning Resources</h3>
+            <p>When I get stuck, I usually go straight to documentation before I go to random forum answers. It helps me understand what the technology is supposed to do.</p>
+
+            <p>
+              <a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer" title="MDN Web Docs">
+                Visit MDN Web Docs
+              </a>
+            </p>
+
+            <!-- Nested demo (you already had this — GOOD for assignment) -->
+            <div class="nested-demo">
+              <h4>Box Sizing Demo</h4>
+              <p>This shows what happens when a child has <code>width: 100%</code> plus padding.</p>
+
+              <div class="child-default">
+                <p><strong>Default (content-box):</strong> padding can make this overflow wider than the parent.</p>
+              </div>
+
+              <div class="child-borderbox">
+                <p><strong>border-box:</strong> padding stays inside the 100% width, so it fits.</p>
+              </div>
+            </div>
+
+          </section>
+
+        </aside>
+
+      </div>
+
     </article>
   </main>
 

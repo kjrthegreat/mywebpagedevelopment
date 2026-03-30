@@ -225,7 +225,6 @@ footer {
   padding: 1rem;
   border: 2px solid #222222;
   margin-bottom: 1rem;
-  /* IMPORTANT: no box-sizing here, so padding can cause overflow */
   box-sizing: content-box;
 }
 
@@ -233,8 +232,9 @@ footer {
   width: 100%;
   padding: 1rem;
   border: 2px solid #222222;
-  box-sizing: border-box; /* fix: padding/border stays inside the width */
+  box-sizing: border-box;
 }
+
 /* =========================
    Image Styling (CSS3 Demo)
    ========================= */
@@ -251,4 +251,36 @@ img {
 img:hover {
   transform: scale(1.02);
   transition: transform 0.2s ease;
+}
+
+/* =========================
+   FLEXBOX ADDITIONS
+   ========================= */
+
+/* Convert nav to Flexbox */
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nav-links li {
+  margin-right: 0;
+}
+
+/* Two-column layout */
+.flex-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* Main content */
+.main-column {
+  flex: 2 1 500px;
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 1 1 250px;
 }
