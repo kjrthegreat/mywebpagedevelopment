@@ -61,11 +61,13 @@ h3 {
   list-style: none;
   padding: 0;                    /* box-model choice */
   margin: 1rem 0 0 0;            /* box-model choice */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .nav-links li {
-  display: inline-block;
-  margin-right: 1rem;            /* spacing between link boxes */
+  margin-right: 0;
 }
 
 .nav-links a {
@@ -106,7 +108,7 @@ header {
 
 /* (C) Center main with width + margin:auto */
 main {
-  width: min(900px, 92%);
+  width: min(1200px, 92%);
   margin: 2rem auto;             /* centers horizontally */
   padding: 1.5rem;               /* uses rem */
   border: 2px solid #222222;
@@ -257,31 +259,19 @@ img:hover {
    FLEXBOX ADDITIONS
    ========================= */
 
-/* Convert nav to Flexbox */
-.nav-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.nav-links li {
-  margin-right: 0;
-}
-
-/* Two-column layout */
 .flex-layout {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  align-items: flex-start; /* add this */
+  align-items: flex-start;
 }
 
-/* Main content */
 .main-column {
-  flex: 2 1 500px;
+  flex: 2 1 600px;
+  min-width: 0;
 }
 
-/* Sidebar */
 .sidebar {
-  flex: 1 1 250px;
+  flex: 1 1 280px;
+  min-width: 0;
 }
