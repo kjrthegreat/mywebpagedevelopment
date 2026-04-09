@@ -130,7 +130,7 @@ p {
   max-width: 70ch;
 }
 
-/* Your existing descendant selector idea (kept) */
+/* */
 article p {
   font-size: 1.05em;             /* relative to parent font size */
 }
@@ -192,7 +192,7 @@ blockquote {
   line-height: 1.6;
 }
 
-/* Code styling if applicable */
+/* Code styling*/
 code,
 pre {
   font-family: "Courier New", Courier, monospace;
@@ -274,4 +274,72 @@ img:hover {
 .sidebar {
   flex: 1 1 280px;
   min-width: 0;
+}
+/* =========================
+   ADD-ON STYLES ONLY
+   ========================= */
+
+/* Child selector requirement */
+nav > ul {
+  align-items: center;
+}
+
+/* More visual polish */
+header p {
+  max-width: 75ch;
+  margin-bottom: 0;
+}
+
+section > h3 {
+  border-bottom: 2px solid #cccccc;
+  padding-bottom: 0.4rem;
+}
+
+/* Reusable card-style feel for sections */
+section {
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+/* Flexbox add-on for header so it wraps naturally on smaller screens */
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Flexbox add-on for footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Improve nav wrapping and spacing */
+.nav-links {
+  align-items: center;
+}
+
+/* Better readability for list sections */
+section ul,
+section ol {
+  max-width: 70ch;
+}
+
+/* Make blockquotes stand out a little more */
+blockquote {
+  border-left: 6px solid #990000;
+}
+
+/* Keyboard accessibility polish */
+a:focus-visible {
+  outline: 3px solid #990000;
+  outline-offset: 2px;
+}
+
+/* Slightly cleaner image presentation */
+picture {
+  display: block;
 }
